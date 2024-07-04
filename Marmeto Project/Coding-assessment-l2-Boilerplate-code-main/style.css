@@ -1,0 +1,165 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid orange;
+  padding: 10px;
+  width: 60%;
+  /* max-width: 1200px; */
+}
+
+.product-image img {
+  width: 100%;
+}
+
+.image-thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.image-thumbnails img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.current-price {
+  font-size: 24px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.discount {
+  font-size: 14px;
+  color: #e74c3c;
+  margin-right: 10px;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.product-options {
+  margin-bottom: 20px;
+}
+
+.product-colors,
+.product-sizes {
+  margin-bottom: 10px;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.color-option.beige { background-color: #f5f5dc; }
+.color-option.green { background-color: #98fb98; }
+.color-option.pink { background-color: #ffc0cb; }
+.color-option.purple { background-color: #dda0dd; }
+
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-options label {
+  cursor: pointer;
+}
+
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quantity-decrease,
+.quantity-increase {
+  padding: 5px 10px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .product-page {
+      flex-direction: row;
+      height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-page {
+      height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-page {
+      width: 90%;
+  }
+
+  .product-image {
+      margin-bottom: 20px;
+  }
+
+  .image-thumbnails img {
+      width: 50px;
+      height: 50px;
+  }
+}
